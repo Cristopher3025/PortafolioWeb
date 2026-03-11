@@ -104,3 +104,5 @@ Este enfoque permite demostrar tanto competencias técnicas como habilidades de 
 
 ## 📌 Conclusión
 El perfil profesional se orienta hacia un **QA Engineer con enfoque en automatización avanzada y liderazgo técnico**, preparado para aportar valor en empresas que trabajan con arquitecturas modernas y procesos de integración continua.
+
+El link de lo generado en Figma: https://ahead-sting-18169873.figma.site
