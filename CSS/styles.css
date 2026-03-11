@@ -1,0 +1,408 @@
+/* GOOGLE FONT */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono&display=swap");
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: white;
+  background-color: #0b1424;
+
+  /* GRID BACKGROUND */
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+}
+
+/* BLUE GLOW */
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: radial-gradient(
+    circle at 70% 30%,
+    rgba(78, 161, 255, 0.25),
+    transparent 40%
+  );
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 120px 8%;
+}
+
+section h2 {
+  font-size: 42px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+section p {
+  color: #9fb3c8;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: rgba(10, 20, 40, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.logo span {
+  color: #6bbcff;
+  margin-left: 6px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #cfd9e6;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #6bbcff;
+}
+
+.btn-hire {
+  background: #4ea1ff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-hire:hover {
+  background: #318cff;
+}
+
+/* HERO */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 8%;
+  min-height: 80vh;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.badge {
+  background: #13263f;
+  color: #6bbcff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, #6bbcff, #8a7dff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero h2 {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 20px;
+  color: #7aa2d6;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #9fb3c8;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* STATS */
+
+.stats {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+
+.stats h3 {
+  font-size: 28px;
+  color: #6bbcff;
+}
+
+.stats p {
+  font-size: 14px;
+  color: #9fb3c8;
+}
+
+/* BUTTONS */
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-primary {
+  background: #4ea1ff;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #318cff;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #4ea1ff;
+  padding: 14px 26px;
+  border-radius: 10px;
+  color: #4ea1ff;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: #4ea1ff;
+  color: white;
+}
+
+/* PROFILE IMAGE */
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #4ea1ff;
+  box-shadow: 0 0 40px rgba(78, 161, 255, 0.4);
+}
+
+/* TECH BOX */
+
+.tech-box {
+  position: absolute;
+  top: 20%;
+  right: -60px;
+  background: #13263f;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #9ecfff;
+}
+
+/* SKILLS */
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.skill {
+  background: #111a2e;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+}
+
+.skill:hover {
+  transform: translateY(-6px);
+  border-color: #4ea1ff;
+}
+
+.skill h3 {
+  margin-bottom: 10px;
+  color: #6bbcff;
+}
+
+/* JOB EXPERIENCE */
+
+.job {
+  background: #111a2e;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 25px;
+}
+
+.job h3 {
+  color: #6bbcff;
+  margin-bottom: 10px;
+}
+
+.job ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  color: #9fb3c8;
+}
+
+/* PROJECTS */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project {
+  background: #111a2e;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  border-color: #4ea1ff;
+}
+
+.project h3 {
+  margin-bottom: 15px;
+  color: #6bbcff;
+}
+
+/* SERVICES */
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service {
+  background: #111a2e;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.service h3 {
+  margin-bottom: 10px;
+  color: #6bbcff;
+}
+
+/* CONTACT */
+
+#contacto p {
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+/* FOOTER */
+
+.footer {
+  margin-top: 100px;
+  padding: 40px;
+  text-align: center;
+  background: #0a1220;
+  color: #6c7a95;
+}
+
+/* SCROLL BUTTON */
+
+#scrollTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #4ea1ff;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin-top: 40px;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  nav {
+    display: none;
+  }
+}
